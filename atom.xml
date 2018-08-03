@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-08-02T12:13:59.527Z</updated>
+  <updated>2018-08-03T03:58:36.582Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,28 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>全排列</title>
+    <link href="http://yoursite.com/2018/08/03/%E5%85%A8%E6%8E%92%E5%88%97/"/>
+    <id>http://yoursite.com/2018/08/03/全排列/</id>
+    <published>2018-08-03T03:54:16.000Z</published>
+    <updated>2018-08-03T03:58:36.582Z</updated>
+    
+    <content type="html"><![CDATA[<p>##全排列##<br>从 n 个不同元素中任取 m（m≤n）个元素，按照一定的顺序排列起来，叫做从 n 个不同元素中取出 m 个元素的一个排列。当 m=n 时所有的排列情况叫全排列。</p><a id="more"></a><p>例如：<br>1 、2 、3 三个元素的全排列为：<br>{1，2，3}，{1，3，2}，{2，1，3}，{2，3，1}，{3，1，2}，{3，2，1}。<br>设 R={r1,r2,…,rn}是要进行排列的 n 个元素，Ri=R-{ri}。<br>集合 X 中元素的全排列记为 perm(X)。<br>(ri)perm(X)表示在全排列 perm(X)的每一个排列前加上前缀得到的排列。<br>R 的全排列可归纳定义如下：<br>当 n=1 时，perm(R)=(r)，其中 r 是集合 R 中唯一的元素；<br>当 n&gt;1 时，perm(R)由(r1)perm(R1)，(r2)perm(R2)，…，(rn)perm(Rn)构成。<br>很明显全排列问题具有递归结构。<br>实现思想：将整组数中的所有的数分别与第一个数交换，这样就总是在处理后 n-1 个数的全排列。</p><p>##实现##<br>1、首先要写一个交换函数 swap，实现将数组中两个元素交换位置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 交换函数，将数组中元素交换</span><br><span class="line"> * @param s</span><br><span class="line"> * @param i</span><br><span class="line"> * @param j</span><br><span class="line"> */</span><br><span class="line">public static void swap(int[] s,int i,int j) &#123;</span><br><span class="line">int temp = s[j];</span><br><span class="line">s[j] = s[i];</span><br><span class="line">s[i] = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><pre><code>2、核心递归算法代码</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 核心代码</span><br><span class="line"> * @param s</span><br><span class="line"> * @param start</span><br><span class="line"> * @param end</span><br><span class="line"> */</span><br><span class="line">public static void Perm(int[] s,int start,int end) &#123;</span><br><span class="line">if(start == end) &#123;</span><br><span class="line">for(int i = 0;i&lt;=end; i++) &#123;</span><br><span class="line">System.out.print(s[i] + &quot; &quot;);</span><br><span class="line">&#125;</span><br><span class="line">System.out.println();</span><br><span class="line">&#125;</span><br><span class="line">for(int i = start;i&lt;=end;i++) &#123;</span><br><span class="line">swap(s,start,i);</span><br><span class="line">Perm(s,start+1,end);</span><br><span class="line">swap(s,start,i);//</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><pre><code>3、在main函数中写int[] s = {1,2,3};  Perm(s,0,2);这两行代码，可以将1,2,3的全排列显示出来：</code></pre><p><img src="https://img-blog.csdn.net/20180428200412825?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MDQ2NTEw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p><p>##改进##<br>这个方法存在一个问题，如果原数组中存在两个或以上的元素相等的话，输出会有重复结果，所以这里对函数添加一下判断条件：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 核心代码</span><br><span class="line"> * @param s</span><br><span class="line"> * @param start</span><br><span class="line"> * @param end</span><br><span class="line"> */</span><br><span class="line">public static void Perm(int[] s,int start,int end) &#123;</span><br><span class="line">if(start == end) &#123;</span><br><span class="line">for(int i = 0;i&lt;=end; i++) &#123;</span><br><span class="line">System.out.print(s[i] + &quot; &quot;);</span><br><span class="line">&#125;</span><br><span class="line">System.out.println();</span><br><span class="line">&#125;</span><br><span class="line">for(int i = start;i&lt;=end;i++) &#123;</span><br><span class="line">//添加判断条件</span><br><span class="line">if(i == start || s[i] != s[start]) &#123;</span><br><span class="line">swap(s,start,i);</span><br><span class="line">Perm(s,start+1,end);</span><br><span class="line">swap(s,start,i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><pre><code>输出：</code></pre><p><img src="https://img-blog.csdn.net/20180428201136470?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MDQ2NTEw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##全排列##&lt;br&gt;从 n 个不同元素中任取 m（m≤n）个元素，按照一定的顺序排列起来，叫做从 n 个不同元素中取出 m 个元素的一个排列。当 m=n 时所有的排列情况叫全排列。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="算法分析与设计" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>大话西游</title>
     <link href="http://yoursite.com/2018/08/02/%E5%A4%A7%E8%AF%9D%E8%A5%BF%E6%B8%B8/"/>
     <id>http://yoursite.com/2018/08/02/大话西游/</id>
     <published>2018-08-02T07:38:50.000Z</published>
-    <updated>2018-08-02T12:13:59.527Z</updated>
+    <updated>2018-08-03T04:14:04.100Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="大话西游经典语录"><a href="#大话西游经典语录" class="headerlink" title="大话西游经典语录"></a>大话西游经典语录</h1><p><img src="大话西游/xin.jpg" alt=""></p><p>曾经有一份真诚的爱情放在我面前，我没有珍惜，等我失去的时候我才后悔莫及，人世间最痛苦的事莫过于此。<br>如果上天能够给我一个再来一次的机会，我会对那个女孩子说三个字：我爱你。<br>如果非要在这份爱上加上一个期限，我希望是……<br>一万年</p><p>我的意中人是个盖世英雄，有一天他会踩着七色云彩来娶我，我猜中了前头可我猜不着这结局。</p><p>生亦何欢，死亦何苦</p><p>我的意中人是一个盖世英雄。<br>上天既然安排他拔出我的紫青宝剑，<br>他一定是个不平凡的人，<br>错不了！<br>我知道有一天他会在一个万众瞩目的情况下出现，<br>身披金甲圣衣，<br>脚踏七彩祥云来娶我！</p><p>喜欢一个人需要理由吗？<br>需要吗？<br>不需要吗？<br>需要吗？</p><p>清风舞明月，幽梦落花间。一梦醒来，恍如隔世，两眉间，相思尽染</p><p>我那么喜欢你，你喜欢我一下会死啊？</p><p>骗就骗吧，就像飞蛾一样，明知道会受伤，还是要扑到火上，飞蛾就这么傻。</p><p>我很仰慕你。 -仰慕我？ -岂止是仰慕？简直是害怕失去你。</p><p>原来那个女孩子在我心里留下了一滴眼泪，我完全可以感受到当时她是多么的伤心。</p><p>你看，那个人好像一条狗哎。</p><a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<h1 id="大话西游经典语录"><a href="#大话西游经典语录" class="headerlink" title="大话西游经典语录"></a>大话西游经典语录</h1><p><img src="/2018/08/02/大话西游/xin.jpg" alt=""></p><p>曾经有一份真诚的爱情放在我面前，我没有珍惜，等我失去的时候我才后悔莫及，人世间最痛苦的事莫过于此。<br>如果上天能够给我一个再来一次的机会，我会对那个女孩子说三个字：我爱你。<br>如果非要在这份爱上加上一个期限，我希望是……<br>一万年</p><a id="more"></a><p>我的意中人是个盖世英雄，有一天他会踩着七色云彩来娶我，我猜中了前头可我猜不着这结局。</p><p>生亦何欢，死亦何苦</p><p>我的意中人是一个盖世英雄。<br>上天既然安排他拔出我的紫青宝剑，<br>他一定是个不平凡的人，<br>错不了！<br>我知道有一天他会在一个万众瞩目的情况下出现，<br>身披金甲圣衣，<br>脚踏七彩祥云来娶我！</p><p>喜欢一个人需要理由吗？<br>需要吗？<br>不需要吗？<br>需要吗？</p><p>清风舞明月，幽梦落花间。一梦醒来，恍如隔世，两眉间，相思尽染</p><p>我那么喜欢你，你喜欢我一下会死啊？</p><p>骗就骗吧，就像飞蛾一样，明知道会受伤，还是要扑到火上，飞蛾就这么傻。</p><p>我很仰慕你。 -仰慕我？ -岂止是仰慕？简直是害怕失去你。</p><p>原来那个女孩子在我心里留下了一滴眼泪，我完全可以感受到当时她是多么的伤心。</p><p>你看，那个人好像一条狗哎。</p>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;大话西游经典语录&quot;&gt;&lt;a href=&quot;#大话西游经典语录&quot; class=&quot;headerlink&quot; title=&quot;大话西游经典语录&quot;&gt;&lt;/a&gt;大话西游经典语录&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;大话西游/xin.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+      &lt;h1 id=&quot;大话西游经典语录&quot;&gt;&lt;a href=&quot;#大话西游经典语录&quot; class=&quot;headerlink&quot; title=&quot;大话西游经典语录&quot;&gt;&lt;/a&gt;大话西游经典语录&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/2018/08/02/大话西游/xin.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;曾经有一份真诚的爱情放在我面前，我没有珍惜，等我失去的时候我才后悔莫及，人世间最痛苦的事莫过于此。&lt;br&gt;如果上天能够给我一个再来一次的机会，我会对那个女孩子说三个字：我爱你。&lt;br&gt;如果非要在这份爱上加上一个期限，我希望是……&lt;br&gt;一万年&lt;/p&gt;
-&lt;p&gt;我的意中人是个盖世英雄，有一天他会踩着七色云彩来娶我，我猜中了前头可我猜不着这结局。&lt;/p&gt;
-&lt;p&gt;生亦何欢，死亦何苦&lt;/p&gt;
-&lt;p&gt;我的意中人是一个盖世英雄。&lt;br&gt;上天既然安排他拔出我的紫青宝剑，&lt;br&gt;他一定是个不平凡的人，&lt;br&gt;错不了！&lt;br&gt;我知道有一天他会在一个万众瞩目的情况下出现，&lt;br&gt;身披金甲圣衣，&lt;br&gt;脚踏七彩祥云来娶我！&lt;/p&gt;
-&lt;p&gt;喜欢一个人需要理由吗？&lt;br&gt;需要吗？&lt;br&gt;不需要吗？&lt;br&gt;需要吗？&lt;/p&gt;
-&lt;p&gt;清风舞明月，幽梦落花间。一梦醒来，恍如隔世，两眉间，相思尽染&lt;/p&gt;
-&lt;p&gt;我那么喜欢你，你喜欢我一下会死啊？&lt;/p&gt;
-&lt;p&gt;骗就骗吧，就像飞蛾一样，明知道会受伤，还是要扑到火上，飞蛾就这么傻。&lt;/p&gt;
-&lt;p&gt;我很仰慕你。 -仰慕我？ -岂止是仰慕？简直是害怕失去你。&lt;/p&gt;
-&lt;p&gt;原来那个女孩子在我心里留下了一滴眼泪，我完全可以感受到当时她是多么的伤心。&lt;/p&gt;
-&lt;p&gt;你看，那个人好像一条狗哎。&lt;/p&gt;
     
     </summary>
     
