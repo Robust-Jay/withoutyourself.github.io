@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-08-03T07:36:46.065Z</updated>
+  <updated>2018-08-03T09:04:16.902Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用git与github远程连接</title>
+    <link href="http://yoursite.com/2018/08/03/%E4%BD%BF%E7%94%A8git%E4%B8%8Egithub%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/"/>
+    <id>http://yoursite.com/2018/08/03/使用git与github远程连接/</id>
+    <published>2018-08-03T08:59:08.000Z</published>
+    <updated>2018-08-03T09:04:16.902Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="windows-下使用-git-和-github-建立远程仓库"><a href="#windows-下使用-git-和-github-建立远程仓库" class="headerlink" title="windows 下使用 git 和 github 建立远程仓库"></a>windows 下使用 git 和 github 建立远程仓库</h1><h2 id="首先在本地建立本地仓库"><a href="#首先在本地建立本地仓库" class="headerlink" title="首先在本地建立本地仓库"></a>首先在本地建立本地仓库</h2><p>git init</p><h2 id="设置全局用户"><a href="#设置全局用户" class="headerlink" title="设置全局用户"></a>设置全局用户</h2><p>git config –global user.name “yourname”<br>git config –global user.email “your email addr”</p><h2 id="建立远程仓库"><a href="#建立远程仓库" class="headerlink" title="建立远程仓库"></a>建立远程仓库</h2><p>在 github 上创建一个新的 repository</p><h2 id="写好“日志”"><a href="#写好“日志”" class="headerlink" title="写好“日志”"></a>写好“日志”</h2><p>git commit -m “………………”</p><h2 id="将本地仓库和远程仓库建立连接"><a href="#将本地仓库和远程仓库建立连接" class="headerlink" title="将本地仓库和远程仓库建立连接"></a>将本地仓库和远程仓库建立连接</h2><p>git remote add origin <a href="mailto:git@github.co" target="_blank" rel="noopener">git@github.co</a>m——- #仓库的 SSH</p><h2 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h2><p>git push -u origin master</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;windows-下使用-git-和-github-建立远程仓库&quot;&gt;&lt;a href=&quot;#windows-下使用-git-和-github-建立远程仓库&quot; class=&quot;headerlink&quot; title=&quot;windows 下使用 git 和 github 建立远程仓
+      
+    
+    </summary>
+    
+      <category term="git" scheme="http://yoursite.com/categories/git/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>matlab学习笔记之notebook的使用</title>
