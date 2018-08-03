@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-08-03T03:58:36.582Z</updated>
+  <updated>2018-08-03T07:36:46.065Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>matlab学习笔记之notebook的使用</title>
+    <link href="http://yoursite.com/2018/08/03/matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8Bnotebook%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2018/08/03/matlab学习笔记之notebook的使用/</id>
+    <published>2018-08-03T06:24:43.000Z</published>
+    <updated>2018-08-03T07:36:46.065Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="MATLAB的文字处理工具Notebook"><a href="#MATLAB的文字处理工具Notebook" class="headerlink" title="MATLAB的文字处理工具Notebook"></a>MATLAB的文字处理工具Notebook</h1><p>Notebook是MATLAB的文字处理工具，是MATLAB与Microsoft Word的完美结合，使MATLAB在原来运算功能的基础上增加了文档功能，可以用于科技报告、论文、著作和讲义、教材等。<br><a id="more"></a></p><h2 id="Notebook的安装"><a href="#Notebook的安装" class="headerlink" title="Notebook的安装"></a>Notebook的安装</h2><p><strong>首先要确保安装了Word和MATLAB。</strong><br>运行MATLAB之后，在命令窗口中输入安装命令：<br>notebook -setup</p><p>安装完成后会显示：</p><p>Welcome to the utility for setting up the MATLAB Notebook<br>for interfacing MATLAB to Microsoft Word</p><p>Setup complete</p><p>那么这样就表示安装notebook成功了。</p><h2 id="Notebook的启动"><a href="#Notebook的启动" class="headerlink" title="Notebook的启动"></a>Notebook的启动</h2><h3 id="（1）从Word中启动notebook"><a href="#（1）从Word中启动notebook" class="headerlink" title="（1）从Word中启动notebook"></a>（1）从Word中启动notebook</h3><p>打开Word，选择窗口的菜单“文件”-&gt;“新建”后，在“新建文档”栏选择“本机上的模板…”，则出现下图所示对话框：<br><img src="/2018/08/03/matlab学习笔记之notebook的使用/模板对话框.png" alt="模板对话框"><br>选择“m-book.dot”图标后按“确定”按钮。如果此时MATLAB还未启动，则MATLAB自动被启动，然后就出现新的“M-book”文档样式的Word窗口。</p><h3 id="（2）从MATLAB中启动notebook"><a href="#（2）从MATLAB中启动notebook" class="headerlink" title="（2）从MATLAB中启动notebook"></a>（2）从MATLAB中启动notebook</h3><p>直接在命令窗口中输入：<br>notebook                              %创建新的word文件<br>notebook ‘完整路径或文件名’             %打开已有的word文件</p><h2 id="Notebook的界面"><a href="#Notebook的界面" class="headerlink" title="Notebook的界面"></a>Notebook的界面</h2><p>创建的M-book文件界面比普通的Word多一个“Notebook”菜单：<br><img src="/2018/08/03/matlab学习笔记之notebook的使用/Notebook菜单.png" alt="Notebook菜单"></p><h2 id="Notebook的使用"><a href="#Notebook的使用" class="headerlink" title="Notebook的使用"></a>Notebook的使用</h2><h3 id="定义单元"><a href="#定义单元" class="headerlink" title="定义单元"></a>定义单元</h3><p>在Notebook中，参与Word和MATLAB之间信息交换的部分称为单元或单元组(Cells or Cell group)<br>（1）输入单元<br>    （Input cells）是由M-book送给MATLAB的命令，在MATLAB中合法的命令、注释都可以定义为输入单元。<br>（2）单元组<br>    （Cell group）是多行输入单元或自动初始化单元组成的一个整体。使用单元组可以保证MATLAB命令结构（如循环、条件等结构）的完整性，以及输出结果和图形的完整性。<br>（3）输出单元<br>    （Output cells）由MATLAB返回给M-book的计算结果称为输出单元，输出单元包括数据、图形和出错信息。<br>（4）计算区<br>    （Calc Zone）是由文本、输入单元和输出单元组成的连续区，用于实现某个具体的问题。</p><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>在菜单“Notebook”中，可以分别选择“Evaluate Cells”运行输入单元，或选择“Evaluate M-book Calc Zone”运行计算区，也可以选择“Evaluste M-book”运行整个M-book文件，运行后显示输出单元。</p><p>定义输入单元，可以使用Notebook菜单，或者组合键”Alt + D”<br>如我们输入一下内容：<br><img src="/2018/08/03/matlab学习笔记之notebook的使用/定义输入单元.png" alt=""></p><p>选中代码部分，然后按下Alt + D，发现代码变成了绿色，表示这是一个输入单元：<br><img src="/2018/08/03/matlab学习笔记之notebook的使用/输入.png" alt=""></p><p>定义输入单元之后，选择Notebook菜单中的“EvaluateCell”或者组合键“Ctrl+Enter”执行单元，<br>输出直接在相应输入单元之后显示，使用蓝色Courier New字体显示。<br>这是我们发现matlab中出现了新的变量：<br><img src="/2018/08/03/matlab学习笔记之notebook的使用/工作区1.png" alt=""></p><p>比如我们要绘制一个图片：<br><img src="/2018/08/03/matlab学习笔记之notebook的使用/输入2.png" alt=""></p><p>它便自动将图片粘贴在下方：<br><img src="/2018/08/03/matlab学习笔记之notebook的使用/输出2.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;MATLAB的文字处理工具Notebook&quot;&gt;&lt;a href=&quot;#MATLAB的文字处理工具Notebook&quot; class=&quot;headerlink&quot; title=&quot;MATLAB的文字处理工具Notebook&quot;&gt;&lt;/a&gt;MATLAB的文字处理工具Notebook&lt;/h1&gt;&lt;p&gt;Notebook是MATLAB的文字处理工具，是MATLAB与Microsoft Word的完美结合，使MATLAB在原来运算功能的基础上增加了文档功能，可以用于科技报告、论文、著作和讲义、教材等。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="matlab学习笔记" scheme="http://yoursite.com/categories/matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="-matlab" scheme="http://yoursite.com/tags/matlab/"/>
+    
+  </entry>
   
   <entry>
     <title>全排列</title>
