@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-08-03T09:04:16.902Z</updated>
+  <updated>2018-08-04T02:19:50.786Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,20 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>软件工程基础一</title>
+    <link href="http://yoursite.com/2018/08/04/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%9F%BA%E7%A1%80%E4%B8%80/"/>
+    <id>http://yoursite.com/2018/08/04/软件工程基础一/</id>
+    <published>2018-08-04T00:40:48.000Z</published>
+    <updated>2018-08-04T02:19:50.786Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="软件工程概念"><a href="#软件工程概念" class="headerlink" title="软件工程概念"></a>软件工程概念</h1><p>软件工程是指应用计算机科学、数学以及管理科学等原理，以工程化的原则和方法来解决软件问题的工程，其目的是提高软件生产率、提高软件质量、降低软件成本。软件工程涉及软件开发、维护、管理等多方面的原理、方法、工具与环境。</p><a id="more"></a><h1 id="计算机软件"><a href="#计算机软件" class="headerlink" title="计算机软件"></a>计算机软件</h1><p>计算机软件是指计算机系统中的程序及其文档。程序是计算任务的处理对象和处理规则的描述。任何以计算机为处理工具的任务都是计算任务。处理对象是数据（如数字、文字、图形、图像、声音等，它们只是表示，而无含义）或信息（数据及其有关的含义）。处理规则一般指处理的动作和步骤。文档是为了便于了解程序所需的阐述性资料。</p><h2 id="系统软件"><a href="#系统软件" class="headerlink" title="系统软件"></a>系统软件</h2><pre><code>系统软件是一整套服务于其他程序的程序。某些系统软件处理复杂但是确定的信息结构。另一些系统应用程序（操作系统构件、驱动程序、网络软件、远程通信处理器）主要处理的是不确定的数据。无论何种情况，系统软件多有一下特点：和计算机硬件大量交互；多用户大量使用；需要调度、资源共享和复杂进程管理的同步操作；复杂的数据结构以及多种外部接口。</code></pre><h2 id="应用软件"><a href="#应用软件" class="headerlink" title="应用软件"></a>应用软件</h2><pre><code>应用软件是解决特定业务需要的独立应用程序。这类应用处理商务或技术数据，以协助业务操作和管理或技术决策。除了传统数据处理的应用程序，应用软件也被用于业务功能的实时控制。</code></pre><h2 id="工程-科学软件"><a href="#工程-科学软件" class="headerlink" title="工程/科学软件"></a>工程/科学软件</h2><h2 id="嵌入式软件"><a href="#嵌入式软件" class="headerlink" title="嵌入式软件"></a>嵌入式软件</h2><h2 id="产品线软件"><a href="#产品线软件" class="headerlink" title="产品线软件"></a>产品线软件</h2><h2 id="Web-应用软件"><a href="#Web-应用软件" class="headerlink" title="Web 应用软件"></a>Web 应用软件</h2><h2 id="人工智能软件"><a href="#人工智能软件" class="headerlink" title="人工智能软件"></a>人工智能软件</h2><h2 id="开放计算"><a href="#开放计算" class="headerlink" title="开放计算"></a>开放计算</h2><h2 id="网络资源"><a href="#网络资源" class="headerlink" title="网络资源"></a>网络资源</h2><h2 id="开源软件"><a href="#开源软件" class="headerlink" title="开源软件"></a>开源软件</h2><h1 id="软件工程基本原理"><a href="#软件工程基本原理" class="headerlink" title="软件工程基本原理"></a>软件工程基本原理</h1><p>美国著名软件工程专家 B.W.Boehm 于 1983 年提出了软件工程的 7 条基本原理。Boehm 认为这 7 原理是确保软件产品质量和开发效率的原理的最小集合。</p><h2 id="1、用分阶段的生命周期计划严格管理"><a href="#1、用分阶段的生命周期计划严格管理" class="headerlink" title="1、用分阶段的生命周期计划严格管理"></a>1、用分阶段的生命周期计划严格管理</h2><h2 id="2、坚持进行阶段评审"><a href="#2、坚持进行阶段评审" class="headerlink" title="2、坚持进行阶段评审"></a>2、坚持进行阶段评审</h2><h2 id="3、实现严格的产品控制"><a href="#3、实现严格的产品控制" class="headerlink" title="3、实现严格的产品控制"></a>3、实现严格的产品控制</h2><h2 id="4、采用现代程序设计技术"><a href="#4、采用现代程序设计技术" class="headerlink" title="4、采用现代程序设计技术"></a>4、采用现代程序设计技术</h2><h2 id="5、结果应能清楚地审查"><a href="#5、结果应能清楚地审查" class="headerlink" title="5、结果应能清楚地审查"></a>5、结果应能清楚地审查</h2><h2 id="6、开发小组的人员应少而精"><a href="#6、开发小组的人员应少而精" class="headerlink" title="6、开发小组的人员应少而精"></a>6、开发小组的人员应少而精</h2><h2 id="7、承认不断改进软件工程实践的必要性"><a href="#7、承认不断改进软件工程实践的必要性" class="headerlink" title="7、承认不断改进软件工程实践的必要性"></a>7、承认不断改进软件工程实践的必要性</h2><h1 id="软件生存周期"><a href="#软件生存周期" class="headerlink" title="软件生存周期"></a>软件生存周期</h1><p>同任何事物一样，一个软件产品或软件系统也要经历孕育、诞生、成长、成熟、衰亡的许多阶段，一般称为软件生存周期。把整个软件生存周期分为若干个阶段，使得每个阶段有明确的任务，使规模大、结构复杂和管理复杂的软件的开发变得容易控制和管理。通常，软件生存周期包括可行性分析与项目开发计划、需求分析、设计（概要设计和详细设计）、编码、测试、维护等活动，可以将这些活动以适当的方式分配到不同的阶段去完成。</p><h2 id="1、可行性分析与项目开发计划"><a href="#1、可行性分析与项目开发计划" class="headerlink" title="1、可行性分析与项目开发计划"></a>1、可行性分析与项目开发计划</h2><h2 id="2、需求分析"><a href="#2、需求分析" class="headerlink" title="2、需求分析"></a>2、需求分析</h2><h2 id="3、概要设计"><a href="#3、概要设计" class="headerlink" title="3、概要设计"></a>3、概要设计</h2><h2 id="4、详细设计"><a href="#4、详细设计" class="headerlink" title="4、详细设计"></a>4、详细设计</h2><h2 id="5、编码"><a href="#5、编码" class="headerlink" title="5、编码"></a>5、编码</h2><h2 id="6、测试"><a href="#6、测试" class="headerlink" title="6、测试"></a>6、测试</h2><h2 id="7、维护"><a href="#7、维护" class="headerlink" title="7、维护"></a>7、维护</h2><h1 id="软件过程"><a href="#软件过程" class="headerlink" title="软件过程"></a>软件过程</h1><p>在开发产品或建构系统时，遵循一定可预测的步骤（即路线图）是非常重要的，它有助于及时交付高质量的产品。软件开发中所遵循的路线图称为“软件过程”。过程是活动的集合，活动是任务的集合。</p><h2 id="1、能力成熟度模型（CMM）——Capability-Maturity-Model-of-Software"><a href="#1、能力成熟度模型（CMM）——Capability-Maturity-Model-of-Software" class="headerlink" title="1、能力成熟度模型（CMM）——Capability Maturity Model of Software"></a>1、能力成熟度模型（CMM）——Capability Maturity Model of Software</h2><p>1）初始级<br>软件过程的特点是杂乱无章，有时甚至很混乱，几乎没有明确定义的步骤，项目的成功完全依赖个人的努力和英雄式核心人物的作用。<br>2）可重复级<br>建立了基本的项目管理过程和实践来跟踪项目费用、进度和功能特性，有必要的过程准则来重复以前在同类项目中的成功。<br>3）已定义级<br>管理和工程两方面的软件过程都已经文档化、标准化，并综合成整个软件开发组织的标准软件过程。所有项目都采用根据实际情况修改后得到的标准软件过程来开发和维护软件。<br>4）已管理级<br>制定了软件过程和产品质量的详细度量标准。软件过程的产品质量都被开发组织的成员所理解和控制。<br>5）优化级<br>加强了定量分析，通过来自过程质量反馈和来自新观念、新技术的反馈使过程能不断持续地改进。</p><h2 id="2、能力成熟度模型（CMMI）"><a href="#2、能力成熟度模型（CMMI）" class="headerlink" title="2、能力成熟度模型（CMMI）"></a>2、能力成熟度模型（CMMI）</h2><h3 id="1）阶段式模型"><a href="#1）阶段式模型" class="headerlink" title="1）阶段式模型"></a>1）阶段式模型</h3><p>· 初始的：过程不可预测且缺乏控制<br>· 已管理的：过程为项目服务<br>· 已定义的：过程为组织服务<br>· 定量管理的：过程已度量和控制<br>· 优化的：集中于过程改进</p><h3 id="2）连续式模型"><a href="#2）连续式模型" class="headerlink" title="2）连续式模型"></a>2）连续式模型</h3><p>连续式模型关注每个过程域的能力，一个组织对不同的过程域可以达到不同的过程域能力等级。<br>· CL0（未完成的）<br>· CL1（已执行的）<br>· CL2（已管理的）<br>· CL3（已定义级的）<br>· CL4（定量管理的）<br>· CL5（优化的）</p><h2 id="统一过程（UP）"><a href="#统一过程（UP）" class="headerlink" title="统一过程（UP）"></a>统一过程（UP）</h2><p>统一过程模型是一种“用例和风险驱动，以架构为中心，迭代并且增量”的开发过程，由 UML 方法和工具支持。迭代的意思是将整个如那件开发项目划分为许多个小的“袖珍项目”，每个“袖珍项目”都包含正常软件项目的所有元素：计划、分析和设计、构造、集成和测试，以及内部和外部发布。</p><p>1）起始阶段</p><p>2）精化阶段</p><p>3）构建阶段</p><p>4）移交阶段</p><p>4 个阶段由主要里程碑所终止<br>· 初始阶段：生命周期目标<br>· 精化阶段：生命周期架构<br>· 构建阶段：初始运作功能<br>· 移交阶段：产品发布</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;软件工程概念&quot;&gt;&lt;a href=&quot;#软件工程概念&quot; class=&quot;headerlink&quot; title=&quot;软件工程概念&quot;&gt;&lt;/a&gt;软件工程概念&lt;/h1&gt;&lt;p&gt;软件工程是指应用计算机科学、数学以及管理科学等原理，以工程化的原则和方法来解决软件问题的工程，其目的是提高软件生产率、提高软件质量、降低软件成本。软件工程涉及软件开发、维护、管理等多方面的原理、方法、工具与环境。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="软件工程" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+    
+    
+      <category term="-软件 -开发 -设计" scheme="http://yoursite.com/tags/%E8%BD%AF%E4%BB%B6-%E5%BC%80%E5%8F%91-%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用git与github远程连接</title>
     <link href="http://yoursite.com/2018/08/03/%E4%BD%BF%E7%94%A8git%E4%B8%8Egithub%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/"/>
     <id>http://yoursite.com/2018/08/03/使用git与github远程连接/</id>
     <published>2018-08-03T08:59:08.000Z</published>
-    <updated>2018-08-03T09:04:16.902Z</updated>
+    <updated>2018-08-04T00:38:34.512Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="windows-下使用-git-和-github-建立远程仓库"><a href="#windows-下使用-git-和-github-建立远程仓库" class="headerlink" title="windows 下使用 git 和 github 建立远程仓库"></a>windows 下使用 git 和 github 建立远程仓库</h1><h2 id="首先在本地建立本地仓库"><a href="#首先在本地建立本地仓库" class="headerlink" title="首先在本地建立本地仓库"></a>首先在本地建立本地仓库</h2><p>git init</p><h2 id="设置全局用户"><a href="#设置全局用户" class="headerlink" title="设置全局用户"></a>设置全局用户</h2><p>git config –global user.name “yourname”<br>git config –global user.email “your email addr”</p><h2 id="建立远程仓库"><a href="#建立远程仓库" class="headerlink" title="建立远程仓库"></a>建立远程仓库</h2><p>在 github 上创建一个新的 repository</p><h2 id="写好“日志”"><a href="#写好“日志”" class="headerlink" title="写好“日志”"></a>写好“日志”</h2><p>git commit -m “………………”</p><h2 id="将本地仓库和远程仓库建立连接"><a href="#将本地仓库和远程仓库建立连接" class="headerlink" title="将本地仓库和远程仓库建立连接"></a>将本地仓库和远程仓库建立连接</h2><p>git remote add origin <a href="mailto:git@github.co" target="_blank" rel="noopener">git@github.co</a>m——- #仓库的 SSH</p><h2 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h2><p>git push -u origin master</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="windows-下使用-git-和-github-建立远程仓库"><a href="#windows-下使用-git-和-github-建立远程仓库" class="headerlink" title="windows 下使用 git 和 github 建立远程仓库"></a>windows 下使用 git 和 github 建立远程仓库</h1><h2 id="首先在本地建立本地仓库"><a href="#首先在本地建立本地仓库" class="headerlink" title="首先在本地建立本地仓库"></a>首先在本地建立本地仓库</h2><p>git init</p><h2 id="设置全局用户"><a href="#设置全局用户" class="headerlink" title="设置全局用户"></a>设置全局用户</h2><p>git config –global user.name “yourname”<br>git config –global user.email “your email addr”<br><a id="more"></a></p><h2 id="建立远程仓库"><a href="#建立远程仓库" class="headerlink" title="建立远程仓库"></a>建立远程仓库</h2><p>在 github 上创建一个新的 repository</p><h2 id="写好“日志”"><a href="#写好“日志”" class="headerlink" title="写好“日志”"></a>写好“日志”</h2><p>git commit -m “………………”</p><h2 id="将本地仓库和远程仓库建立连接"><a href="#将本地仓库和远程仓库建立连接" class="headerlink" title="将本地仓库和远程仓库建立连接"></a>将本地仓库和远程仓库建立连接</h2><p>git remote add origin <a href="mailto:git@github.co" target="_blank" rel="noopener">git@github.co</a>m——- #仓库的 SSH</p><h2 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h2><p>git push -u origin master</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h1 id=&quot;windows-下使用-git-和-github-建立远程仓库&quot;&gt;&lt;a href=&quot;#windows-下使用-git-和-github-建立远程仓库&quot; class=&quot;headerlink&quot; title=&quot;windows 下使用 git 和 github 建立远程仓
-      
+      &lt;h1 id=&quot;windows-下使用-git-和-github-建立远程仓库&quot;&gt;&lt;a href=&quot;#windows-下使用-git-和-github-建立远程仓库&quot; class=&quot;headerlink&quot; title=&quot;windows 下使用 git 和 github 建立远程仓库&quot;&gt;&lt;/a&gt;windows 下使用 git 和 github 建立远程仓库&lt;/h1&gt;&lt;h2 id=&quot;首先在本地建立本地仓库&quot;&gt;&lt;a href=&quot;#首先在本地建立本地仓库&quot; class=&quot;headerlink&quot; title=&quot;首先在本地建立本地仓库&quot;&gt;&lt;/a&gt;首先在本地建立本地仓库&lt;/h2&gt;&lt;p&gt;git init&lt;/p&gt;
+&lt;h2 id=&quot;设置全局用户&quot;&gt;&lt;a href=&quot;#设置全局用户&quot; class=&quot;headerlink&quot; title=&quot;设置全局用户&quot;&gt;&lt;/a&gt;设置全局用户&lt;/h2&gt;&lt;p&gt;git config –global user.name “yourname”&lt;br&gt;git config –global user.email “your email addr”&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
