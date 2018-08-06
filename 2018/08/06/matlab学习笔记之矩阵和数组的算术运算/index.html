@@ -69,7 +69,7 @@
 
 
 
-  <meta name="keywords" content="想法,经典," />
+  <meta name="keywords" content="-matlab," />
 
 
 
@@ -82,20 +82,22 @@
 
 
 
-<meta name="description" content="大话西游经典语录 曾经有一份真诚的爱情放在我面前，我没有珍惜，等我失去的时候我才后悔莫及，人世间最痛苦的事莫过于此。如果上天能够给我一个再来一次的机会，我会对那个女孩子说三个字：我爱你。如果非要在这份爱上加上一个期限，我希望是……一万年">
-<meta name="keywords" content="想法,经典">
+<meta name="description" content="矩阵和数组的算术运算Matlab 中的数组可以说是无处不在的，任何变量都是以数组形式存储和运算的。· 空数组：没有元素的数组· 标量：是指 1×1 的矩阵，即为只含一个数的矩阵· 向量：是指 1×n 或 n×1 的矩阵，即只有一行或者一列的矩阵· 数组：是指多维数组 m×n×k…，其中矩阵和向量都是数组的特例">
+<meta name="keywords" content="-matlab">
 <meta property="og:type" content="article">
-<meta property="og:title" content="大话西游">
-<meta property="og:url" content="http://yoursite.com/2018/08/02/大话西游/index.html">
+<meta property="og:title" content="matlab学习笔记之矩阵和数组的算术运算">
+<meta property="og:url" content="http://yoursite.com/2018/08/06/matlab学习笔记之矩阵和数组的算术运算/index.html">
 <meta property="og:site_name" content="姻缘嘛，上天注定的！">
-<meta property="og:description" content="大话西游经典语录 曾经有一份真诚的爱情放在我面前，我没有珍惜，等我失去的时候我才后悔莫及，人世间最痛苦的事莫过于此。如果上天能够给我一个再来一次的机会，我会对那个女孩子说三个字：我爱你。如果非要在这份爱上加上一个期限，我希望是……一万年">
+<meta property="og:description" content="矩阵和数组的算术运算Matlab 中的数组可以说是无处不在的，任何变量都是以数组形式存储和运算的。· 空数组：没有元素的数组· 标量：是指 1×1 的矩阵，即为只含一个数的矩阵· 向量：是指 1×n 或 n×1 的矩阵，即只有一行或者一列的矩阵· 数组：是指多维数组 m×n×k…，其中矩阵和向量都是数组的特例">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/08/02/大话西游/xin.jpg">
-<meta property="og:updated_time" content="2018-08-03T04:14:04.100Z">
+<meta property="og:image" content="http://yoursite.com/2018/08/06/matlab学习笔记之矩阵和数组的算术运算/多项式.png">
+<meta property="og:image" content="http://yoursite.com/2018/08/06/matlab学习笔记之矩阵和数组的算术运算/求值.png">
+<meta property="og:image" content="http://yoursite.com/2018/08/06/matlab学习笔记之矩阵和数组的算术运算/cftool.png">
+<meta property="og:updated_time" content="2018-08-06T07:08:10.130Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="大话西游">
-<meta name="twitter:description" content="大话西游经典语录 曾经有一份真诚的爱情放在我面前，我没有珍惜，等我失去的时候我才后悔莫及，人世间最痛苦的事莫过于此。如果上天能够给我一个再来一次的机会，我会对那个女孩子说三个字：我爱你。如果非要在这份爱上加上一个期限，我希望是……一万年">
-<meta name="twitter:image" content="http://yoursite.com/2018/08/02/大话西游/xin.jpg">
+<meta name="twitter:title" content="matlab学习笔记之矩阵和数组的算术运算">
+<meta name="twitter:description" content="矩阵和数组的算术运算Matlab 中的数组可以说是无处不在的，任何变量都是以数组形式存储和运算的。· 空数组：没有元素的数组· 标量：是指 1×1 的矩阵，即为只含一个数的矩阵· 向量：是指 1×n 或 n×1 的矩阵，即只有一行或者一列的矩阵· 数组：是指多维数组 m×n×k…，其中矩阵和向量都是数组的特例">
+<meta name="twitter:image" content="http://yoursite.com/2018/08/06/matlab学习笔记之矩阵和数组的算术运算/多项式.png">
 
 
 
@@ -125,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/02/大话西游/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/06/matlab学习笔记之矩阵和数组的算术运算/"/>
 
 
 
 
 
-  <title>大话西游 | 姻缘嘛，上天注定的！</title>
+  <title>matlab学习笔记之矩阵和数组的算术运算 | 姻缘嘛，上天注定的！</title>
   
 
 
@@ -259,7 +261,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/02/大话西游/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/06/matlab学习笔记之矩阵和数组的算术运算/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘涵">
@@ -276,7 +278,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">大话西游</h1>
+          <h1 class="post-title" itemprop="name headline">matlab学习笔记之矩阵和数组的算术运算</h1>
         
 
         <div class="post-meta">
@@ -288,8 +290,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-02T15:38:50+08:00">
-                2018-08-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-06T09:58:43+08:00">
+                2018-08-06
               </time>
             
 
@@ -311,8 +313,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Movie-idea/" itemprop="url" rel="index">
-                    <span itemprop="name">Movie idea</span>
+                  <a href="/categories/matlab学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">matlab学习笔记</span>
                   </a>
                 </span>
 
@@ -342,7 +344,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  386
+                  896
                 </span>
               
 
@@ -358,7 +360,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  3
                 </span>
               
             </div>
@@ -379,19 +381,24 @@
       
 
       
-        <h1 id="大话西游经典语录"><a href="#大话西游经典语录" class="headerlink" title="大话西游经典语录"></a>大话西游经典语录</h1><p><img src="/2018/08/02/大话西游/xin.jpg" alt=""></p>
-<p>曾经有一份真诚的爱情放在我面前，我没有珍惜，等我失去的时候我才后悔莫及，人世间最痛苦的事莫过于此。<br>如果上天能够给我一个再来一次的机会，我会对那个女孩子说三个字：我爱你。<br>如果非要在这份爱上加上一个期限，我希望是……<br>一万年</p>
+        <h1 id="矩阵和数组的算术运算"><a href="#矩阵和数组的算术运算" class="headerlink" title="矩阵和数组的算术运算"></a>矩阵和数组的算术运算</h1><p>Matlab 中的数组可以说是无处不在的，任何变量都是以数组形式存储和运算的。<br>· 空数组：没有元素的数组<br>· 标量：是指 1×1 的矩阵，即为只含一个数的矩阵<br>· 向量：是指 1×n 或 n×1 的矩阵，即只有一行或者一列的矩阵<br>· 数组：是指多维数组 m×n×k…，其中矩阵和向量都是数组的特例</p>
 <a id="more"></a>
-<p>我的意中人是个盖世英雄，有一天他会踩着七色云彩来娶我，我猜中了前头可我猜不着这结局。</p>
-<p>生亦何欢，死亦何苦</p>
-<p>我的意中人是一个盖世英雄。<br>上天既然安排他拔出我的紫青宝剑，<br>他一定是个不平凡的人，<br>错不了！<br>我知道有一天他会在一个万众瞩目的情况下出现，<br>身披金甲圣衣，<br>脚踏七彩祥云来娶我！</p>
-<p>喜欢一个人需要理由吗？<br>需要吗？<br>不需要吗？<br>需要吗？</p>
-<p>清风舞明月，幽梦落花间。一梦醒来，恍如隔世，两眉间，相思尽染</p>
-<p>我那么喜欢你，你喜欢我一下会死啊？</p>
-<p>骗就骗吧，就像飞蛾一样，明知道会受伤，还是要扑到火上，飞蛾就这么傻。</p>
-<p>我很仰慕你。 -仰慕我？ -岂止是仰慕？简直是害怕失去你。</p>
-<p>原来那个女孩子在我心里留下了一滴眼泪，我完全可以感受到当时她是多么的伤心。</p>
-<p>你看，那个人好像一条狗哎。</p>
+<h2 id="数组的创建"><a href="#数组的创建" class="headerlink" title="数组的创建"></a>数组的创建</h2><p>创建矩阵的规则：<br>· 矩阵元素应用方括号括住<br>· 每行内的元素间用逗号或空格隔开<br>· 行与行之间用分号或回车键隔开<br>· 元素可以是数值或表达式</p>
+<h3 id="空数组"><a href="#空数组" class="headerlink" title="空数组"></a>空数组</h3><p>a=[]</p>
+<h3 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h3><p>（1）使用 from:step:to 方式生成等差向量<br>（2）使用 linspace 函数生成线性等分向量<br>linspace(a,b,n)，n 为元素的个数<br>（3）使用 logspace 生成对数等分向量<br>logspace(a,b,n)</p>
+<h3 id="特殊矩阵和数组"><a href="#特殊矩阵和数组" class="headerlink" title="特殊矩阵和数组"></a>特殊矩阵和数组</h3><p>（1）特殊矩阵<br>· magic(N)，产生 N 阶魔方矩阵（矩阵行、列和对角线上元素的和相等）<br>· eye(m,n)，产生 m×n 阶单位矩阵，对角线全为 1</p>
+<p>（2）特殊数组<br>· zeros(d1,d2,d3,…)，产生 d1×d2×d3…的全 0 数组<br>· ones(d1,d2,d3,…)，产生 d1×d2×d3…的全 1 数组<br>· rand(d1,d2,d3,…)，产生均匀分布的随机数组，元素取值范围 0.0~1.0<br>· randn(d1,d2,d3,…)，产生正态分布的随机数组</p>
+<h3 id="多项式"><a href="#多项式" class="headerlink" title="多项式"></a>多项式</h3><p>在 MATLAB 中用行向量来表示多项式的各项系数，使用长度为 n+1 的行向量按降幂排列，用 0 表示多项式中某次幂的缺项。</p>
+<h4 id="多项式的求根和求值"><a href="#多项式的求根和求值" class="headerlink" title="多项式的求根和求值"></a>多项式的求根和求值</h4><p>1、多项式求根<br>使用 roots 函数来计算多项式的根，多项式的根以列向量的形式表示；反过来，也可以根据多项式的根使用 poly 函数获得多项式。</p>
+<p><img src="/2018/08/06/matlab学习笔记之矩阵和数组的算术运算/多项式.png" alt="多项式求根"></p>
+<p>2、多项式求值<br>函数 polyval 和 polyvalm 可以用来计算多项式在给定变量时的值。<br>· polyval(p,x) %得出变量 x 对应多项式值<br>· polyvalm(p,x) %得出矩阵 x 对应多项式值</p>
+<p><img src="/2018/08/06/matlab学习笔记之矩阵和数组的算术运算/求值.png" alt="多项式求值"></p>
+<h4 id="多项式的拟合与插值"><a href="#多项式的拟合与插值" class="headerlink" title="多项式的拟合与插值"></a>多项式的拟合与插值</h4><p>1、多项式的拟合<br>（1）拟合函数 多项式的拟合可以使用 polyfit 函数来实现，拟合的准则是最小二乘法，语法格式如下：<br>p=polyfit(x,y,n) %由 x 和 y 得出多项式 p<br>说明：x、y 向量分别为数据点的横、纵坐标；n 是拟合的多项式阶次；p 为拟合的多项式，p 是 n+1 个系数构成的行向量。</p>
+<p>（2）使用 cftool 拟合工具箱<br><img src="/2018/08/06/matlab学习笔记之矩阵和数组的算术运算/cftool.png" alt="拟合工具箱"></p>
+<p>2、多项式的插值<br>插值是在两个原始数据点之间根据一定的运算关系插入新的数据点，以便更准确地得出数据的变化规律。当工程中有一些离散点的数值，通过插值运算可以得到近似的连续过程，插值运算广泛使用于信号和图像处理领域。</p>
+<p>插值运算有两个条件：<br>· 自变量必须是单调的<br>· 只能在自变量的取值范围内进行插值</p>
+<p>（1）一维插值<br>一维插值是指对一个自变量的插值。interp1 函数用来进行一维插值：<br>yi=interp1(x,y,’method’)<br>method 为插值函数的类型：<br>· linear:线性插值（默认）<br>· nearest：速度最快为用最接近的相邻点插值<br>· spline：速度最慢为三次样条插值<br>· cubic：为三次多项式插值</p>
+<p>（2）二维插值</p>
 
       
     </div>
@@ -420,9 +427,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/想法/" rel="tag"># 想法</a>
-          
-            <a href="/tags/经典/" rel="tag"># 经典</a>
+            <a href="/tags/matlab/" rel="tag"># -matlab</a>
           
         </div>
       
@@ -435,15 +440,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/08/04/软件工程基础二/" rel="next" title="软件工程基础二">
+                <i class="fa fa-chevron-left"></i> 软件工程基础二
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/03/全排列/" rel="prev" title="全排列">
-                全排列 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -610,7 +615,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#大话西游经典语录"><span class="nav-number">1.</span> <span class="nav-text">大话西游经典语录</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵和数组的算术运算"><span class="nav-number">1.</span> <span class="nav-text">矩阵和数组的算术运算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组的创建"><span class="nav-number">1.1.</span> <span class="nav-text">数组的创建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#空数组"><span class="nav-number">1.1.1.</span> <span class="nav-text">空数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向量"><span class="nav-number">1.1.2.</span> <span class="nav-text">向量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊矩阵和数组"><span class="nav-number">1.1.3.</span> <span class="nav-text">特殊矩阵和数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式"><span class="nav-number">1.1.4.</span> <span class="nav-text">多项式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式的求根和求值"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">多项式的求根和求值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式的拟合与插值"><span class="nav-number">1.1.4.2.</span> <span class="nav-text">多项式的拟合与插值</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>

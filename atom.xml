@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-08-04T02:19:50.786Z</updated>
+  <updated>2018-08-06T07:08:10.130Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>matlab学习笔记之矩阵和数组的算术运算</title>
+    <link href="http://yoursite.com/2018/08/06/matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E7%9F%A9%E9%98%B5%E5%92%8C%E6%95%B0%E7%BB%84%E7%9A%84%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97/"/>
+    <id>http://yoursite.com/2018/08/06/matlab学习笔记之矩阵和数组的算术运算/</id>
+    <published>2018-08-06T01:58:43.000Z</published>
+    <updated>2018-08-06T07:08:10.130Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="矩阵和数组的算术运算"><a href="#矩阵和数组的算术运算" class="headerlink" title="矩阵和数组的算术运算"></a>矩阵和数组的算术运算</h1><p>Matlab 中的数组可以说是无处不在的，任何变量都是以数组形式存储和运算的。<br>· 空数组：没有元素的数组<br>· 标量：是指 1×1 的矩阵，即为只含一个数的矩阵<br>· 向量：是指 1×n 或 n×1 的矩阵，即只有一行或者一列的矩阵<br>· 数组：是指多维数组 m×n×k…，其中矩阵和向量都是数组的特例</p><a id="more"></a><h2 id="数组的创建"><a href="#数组的创建" class="headerlink" title="数组的创建"></a>数组的创建</h2><p>创建矩阵的规则：<br>· 矩阵元素应用方括号括住<br>· 每行内的元素间用逗号或空格隔开<br>· 行与行之间用分号或回车键隔开<br>· 元素可以是数值或表达式</p><h3 id="空数组"><a href="#空数组" class="headerlink" title="空数组"></a>空数组</h3><p>a=[]</p><h3 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h3><p>（1）使用 from:step:to 方式生成等差向量<br>（2）使用 linspace 函数生成线性等分向量<br>linspace(a,b,n)，n 为元素的个数<br>（3）使用 logspace 生成对数等分向量<br>logspace(a,b,n)</p><h3 id="特殊矩阵和数组"><a href="#特殊矩阵和数组" class="headerlink" title="特殊矩阵和数组"></a>特殊矩阵和数组</h3><p>（1）特殊矩阵<br>· magic(N)，产生 N 阶魔方矩阵（矩阵行、列和对角线上元素的和相等）<br>· eye(m,n)，产生 m×n 阶单位矩阵，对角线全为 1</p><p>（2）特殊数组<br>· zeros(d1,d2,d3,…)，产生 d1×d2×d3…的全 0 数组<br>· ones(d1,d2,d3,…)，产生 d1×d2×d3…的全 1 数组<br>· rand(d1,d2,d3,…)，产生均匀分布的随机数组，元素取值范围 0.0~1.0<br>· randn(d1,d2,d3,…)，产生正态分布的随机数组</p><h3 id="多项式"><a href="#多项式" class="headerlink" title="多项式"></a>多项式</h3><p>在 MATLAB 中用行向量来表示多项式的各项系数，使用长度为 n+1 的行向量按降幂排列，用 0 表示多项式中某次幂的缺项。</p><h4 id="多项式的求根和求值"><a href="#多项式的求根和求值" class="headerlink" title="多项式的求根和求值"></a>多项式的求根和求值</h4><p>1、多项式求根<br>使用 roots 函数来计算多项式的根，多项式的根以列向量的形式表示；反过来，也可以根据多项式的根使用 poly 函数获得多项式。</p><p><img src="/2018/08/06/matlab学习笔记之矩阵和数组的算术运算/多项式.png" alt="多项式求根"></p><p>2、多项式求值<br>函数 polyval 和 polyvalm 可以用来计算多项式在给定变量时的值。<br>· polyval(p,x) %得出变量 x 对应多项式值<br>· polyvalm(p,x) %得出矩阵 x 对应多项式值</p><p><img src="/2018/08/06/matlab学习笔记之矩阵和数组的算术运算/求值.png" alt="多项式求值"></p><h4 id="多项式的拟合与插值"><a href="#多项式的拟合与插值" class="headerlink" title="多项式的拟合与插值"></a>多项式的拟合与插值</h4><p>1、多项式的拟合<br>（1）拟合函数 多项式的拟合可以使用 polyfit 函数来实现，拟合的准则是最小二乘法，语法格式如下：<br>p=polyfit(x,y,n) %由 x 和 y 得出多项式 p<br>说明：x、y 向量分别为数据点的横、纵坐标；n 是拟合的多项式阶次；p 为拟合的多项式，p 是 n+1 个系数构成的行向量。</p><p>（2）使用 cftool 拟合工具箱<br><img src="/2018/08/06/matlab学习笔记之矩阵和数组的算术运算/cftool.png" alt="拟合工具箱"></p><p>2、多项式的插值<br>插值是在两个原始数据点之间根据一定的运算关系插入新的数据点，以便更准确地得出数据的变化规律。当工程中有一些离散点的数值，通过插值运算可以得到近似的连续过程，插值运算广泛使用于信号和图像处理领域。</p><p>插值运算有两个条件：<br>· 自变量必须是单调的<br>· 只能在自变量的取值范围内进行插值</p><p>（1）一维插值<br>一维插值是指对一个自变量的插值。interp1 函数用来进行一维插值：<br>yi=interp1(x,y,’method’)<br>method 为插值函数的类型：<br>· linear:线性插值（默认）<br>· nearest：速度最快为用最接近的相邻点插值<br>· spline：速度最慢为三次样条插值<br>· cubic：为三次多项式插值</p><p>（2）二维插值</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;矩阵和数组的算术运算&quot;&gt;&lt;a href=&quot;#矩阵和数组的算术运算&quot; class=&quot;headerlink&quot; title=&quot;矩阵和数组的算术运算&quot;&gt;&lt;/a&gt;矩阵和数组的算术运算&lt;/h1&gt;&lt;p&gt;Matlab 中的数组可以说是无处不在的，任何变量都是以数组形式存储和运算的。&lt;br&gt;· 空数组：没有元素的数组&lt;br&gt;· 标量：是指 1×1 的矩阵，即为只含一个数的矩阵&lt;br&gt;· 向量：是指 1×n 或 n×1 的矩阵，即只有一行或者一列的矩阵&lt;br&gt;· 数组：是指多维数组 m×n×k…，其中矩阵和向量都是数组的特例&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="matlab学习笔记" scheme="http://yoursite.com/categories/matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="-matlab" scheme="http://yoursite.com/tags/matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>软件工程基础二</title>
+    <link href="http://yoursite.com/2018/08/04/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%9F%BA%E7%A1%80%E4%BA%8C/"/>
+    <id>http://yoursite.com/2018/08/04/软件工程基础二/</id>
+    <published>2018-08-04T02:24:03.000Z</published>
+    <updated>2018-08-04T14:55:50.835Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="软件过程模型"><a href="#软件过程模型" class="headerlink" title="软件过程模型"></a>软件过程模型</h1><p>软件过程模型习惯上也称为软件开发模型，它是软件开发的全部过程、活动和任务的结构框架。</p><h2 id="瀑布模型"><a href="#瀑布模型" class="headerlink" title="瀑布模型"></a>瀑布模型</h2><p>瀑布模型是将软件生存周期中的各个活动规定为依线性连接的若干阶段的模型，包括需求分析、设计、编码、测试、运行与维护。由前至后、相互衔接的固定次序，如同瀑布流水逐级下落。</p><p><img src="/2018/08/04/软件工程基础二/瀑布模型.png" alt="瀑布模型"></p><p>瀑布模型为软件的开发和维护提供了一种有效的管理模式，根据这一模式制定开发计划，进行成本预算，组织开发力量，以项目的阶段评审和文档控制为手段有效地对整个开发过程进行指导，所以它是以文档作为驱动、适合于软件需求很明确的软件项目模型。</p><h2 id="V-模型（瀑布模型的变体）"><a href="#V-模型（瀑布模型的变体）" class="headerlink" title="V 模型（瀑布模型的变体）"></a>V 模型（瀑布模型的变体）</h2><p>V 模型是瀑布模型的一个变体。V 模型提供了一种将验证确认活动应用于早期软件工程中的方法。</p><p><img src="/2018/08/04/软件工程基础二/V模型.png" alt="V模型"></p><h3 id="瀑布模型的优点"><a href="#瀑布模型的优点" class="headerlink" title="瀑布模型的优点"></a>瀑布模型的优点</h3><p>· 容易理解，管理成本低<br>· 强调开发的阶段性早期计划及需求调查和产品测试</p><h3 id="瀑布模型的缺点"><a href="#瀑布模型的缺点" class="headerlink" title="瀑布模型的缺点"></a>瀑布模型的缺点</h3><p>· 客户必须能够完整、正确和清晰地表达他们的需要<br>· 开始 2 个或 2 个阶段，很难评估真正的进度<br>· 项目结束时，出现大量的集成和测试工作<br>· 需求或设计中的错误往往只有到了项目后期才能够被发现，对于项目风险的控制能力较弱，从而导致项目常常延期完成，开发费用超出预算</p><h2 id="增量模型"><a href="#增量模型" class="headerlink" title="增量模型"></a>增量模型</h2><h3 id="增量模型的优点"><a href="#增量模型的优点" class="headerlink" title="增量模型的优点"></a>增量模型的优点</h3><h3 id="增量模型的缺点"><a href="#增量模型的缺点" class="headerlink" title="增量模型的缺点"></a>增量模型的缺点</h3><h2 id="演化模型"><a href="#演化模型" class="headerlink" title="演化模型"></a>演化模型</h2><h3 id="演化模型之原型模型"><a href="#演化模型之原型模型" class="headerlink" title="演化模型之原型模型"></a>演化模型之原型模型</h3><h3 id="演化模型之螺旋模型"><a href="#演化模型之螺旋模型" class="headerlink" title="演化模型之螺旋模型"></a>演化模型之螺旋模型</h3><h3 id="螺旋模型和瀑布模型比较"><a href="#螺旋模型和瀑布模型比较" class="headerlink" title="螺旋模型和瀑布模型比较"></a>螺旋模型和瀑布模型比较</h3><h2 id="喷泉模型"><a href="#喷泉模型" class="headerlink" title="喷泉模型"></a>喷泉模型</h2><h3 id="喷泉模型的优点"><a href="#喷泉模型的优点" class="headerlink" title="喷泉模型的优点"></a>喷泉模型的优点</h3><h3 id="喷泉模型的缺点"><a href="#喷泉模型的缺点" class="headerlink" title="喷泉模型的缺点"></a>喷泉模型的缺点</h3><h2 id="基于构件的开发模型"><a href="#基于构件的开发模型" class="headerlink" title="基于构件的开发模型"></a>基于构件的开发模型</h2><h2 id="形式化方法模型"><a href="#形式化方法模型" class="headerlink" title="形式化方法模型"></a>形式化方法模型</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;软件过程模型&quot;&gt;&lt;a href=&quot;#软件过程模型&quot; class=&quot;headerlink&quot; title=&quot;软件过程模型&quot;&gt;&lt;/a&gt;软件过程模型&lt;/h1&gt;&lt;p&gt;软件过程模型习惯上也称为软件开发模型，它是软件开发的全部过程、活动和任务的结构框架。&lt;/p&gt;
+&lt;h2 id=
+      
+    
+    </summary>
+    
+      <category term="软件工程" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+    
+    
+      <category term="-软件 -开发 -设计" scheme="http://yoursite.com/tags/%E8%BD%AF%E4%BB%B6-%E5%BC%80%E5%8F%91-%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>软件工程基础一</title>
