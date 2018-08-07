@@ -91,7 +91,7 @@
 <meta property="og:description" content="数据的可视化数据的可视化是 MATLAB 非常擅长的功能，将杂乱无章的数据通过图形来显示，可以从中观察出数据的变化规律、趋势特性等内在的关系。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/08/06/matlab学习笔记之数据的可视化/hold.png">
-<meta property="og:updated_time" content="2018-08-06T08:44:08.334Z">
+<meta property="og:updated_time" content="2018-08-07T02:47:36.332Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab学习笔记之数据的可视化">
 <meta name="twitter:description" content="数据的可视化数据的可视化是 MATLAB 非常擅长的功能，将杂乱无章的数据通过图形来显示，可以从中观察出数据的变化规律、趋势特性等内在的关系。">
@@ -342,7 +342,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  620
+                  1,111
                 </span>
               
 
@@ -358,7 +358,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  4
                 </span>
               
             </div>
@@ -388,6 +388,12 @@
 <p>3、同一窗口多次叠绘<br>使用 hold 命令可以保留原图形，使多个 plot 函数在一个坐标系中不断叠绘，命令格式如下：<br>hold on %使当前坐标系和图形保留<br>hold off %使当前坐标系和图形不保留<br>hold %在以上两个命令中切换<br>hold all %使当前坐标系和图形保留</p>
 <p><img src="/2018/08/06/matlab学习笔记之数据的可视化/hold.png" alt="在同一图中叠绘"></p>
 <p>4、指定图形窗口<br>使用 plot 等绘图命令时，都是默认打开“Figure 1”窗口，使用 figure 语句可以打开多个窗口，命令格式如下：<br>figure(n) %产生新图形窗口</p>
+<h3 id="设置曲线绘制方式、坐标轴和图形注释"><a href="#设置曲线绘制方式、坐标轴和图形注释" class="headerlink" title="设置曲线绘制方式、坐标轴和图形注释"></a>设置曲线绘制方式、坐标轴和图形注释</h3><p>绘制曲线时为了使曲线更具有可读性，需要对图形曲线的线型、颜色、数据点型、坐标轴和图形注释等进行设置。</p>
+<p>1、曲线的线型、颜色和数据点型<br>在 plot 函数中还可以通过字符串参数来设置曲线的线型、颜色和数据点型等，命令格式为：<br>plot(x,y,s)<br>s 为字符串</p>
+<p>2、设置坐标轴<br>常用的坐标轴控制命令，都是以“axis”开头<br>· axis auto %使用默认设置<br>· axis manual %使当前坐标范围不变，以后的图形都在当前坐标范围显示<br>· axis fill %在 manual 方式下起作用，使坐标充满整个绘图区<br>· axis([xmin,xmax,ymin,ymax]) %设定坐标范围</p>
+<p>3、分隔线和坐标框<br>（1）分隔线<br>分隔线是指在坐标系中根据坐标轴的刻度使用虚线进行分隔，分隔线的疏密取决于坐标刻度，MATLAB 默认设置是不显示分隔线。<br>MATLAB 使用 grid on 显示分隔线；grid off 不显示分隔线；反复使用 grid 命令在二者之间切换</p>
+<p>（2）坐标框<br>坐标框是指坐标系的刻度框，MATLAB 默认设置是坐标框呈封闭形式。使用 box on 使当前坐标框呈封闭形式；box off 使当前坐标框呈开启模式；反复使用 box 命令则在二者之间进行切换</p>
+<p>4、图形注释<br>图形注释是对打开的正在编辑的图形进行文字标注，文字标注包括设置标题(title)、设置坐标轴标签(label)、设置图例(legend)和添加标注元素(annotatian)，常用的图形注释命令如下：<br>· title(‘s’) %使用字符串 s 添加图标题<br>· xlabel(‘s’) %使用字符串 s 添加横坐标轴标签<br>· ylabel(‘s’) %使用字符串 s 添加纵坐标轴标签</p>
 
       
     </div>
@@ -604,7 +610,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据的可视化"><span class="nav-number">1.</span> <span class="nav-text">数据的可视化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二维绘图"><span class="nav-number">1.1.</span> <span class="nav-text">二维绘图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#绘图的一般步骤"><span class="nav-number">1.1.1.</span> <span class="nav-text">绘图的一般步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本绘图函数"><span class="nav-number">1.1.2.</span> <span class="nav-text">基本绘图函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多个图形的绘制"><span class="nav-number">1.1.3.</span> <span class="nav-text">多个图形的绘制</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据的可视化"><span class="nav-number">1.</span> <span class="nav-text">数据的可视化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二维绘图"><span class="nav-number">1.1.</span> <span class="nav-text">二维绘图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#绘图的一般步骤"><span class="nav-number">1.1.1.</span> <span class="nav-text">绘图的一般步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本绘图函数"><span class="nav-number">1.1.2.</span> <span class="nav-text">基本绘图函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多个图形的绘制"><span class="nav-number">1.1.3.</span> <span class="nav-text">多个图形的绘制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置曲线绘制方式、坐标轴和图形注释"><span class="nav-number">1.1.4.</span> <span class="nav-text">设置曲线绘制方式、坐标轴和图形注释</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
